@@ -6,12 +6,8 @@ function mostrar()
 	var nombre;
 	var edad;
 
-	nombre.value=elNombre;
-	alert(nombre);
-	elNombre.value="sopelan"
-	//laEdad.value="18";
-	laEdad.value="18";
-	edad.value=laEdad;
-	alert(edad);
+	nombre=elNombre.value;
+	edad=laEdad.value;
+	alert("Usted se llama" + nombre +" y tiene " + edad + " años");
 }
 
