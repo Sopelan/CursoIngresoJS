@@ -59,4 +59,5 @@ var preciofinal;
 sumar=en1 + en2 + en3;
 preciofinal=(sumar*0.21)+sumar;
 alert(preciofinal);
+
 }
