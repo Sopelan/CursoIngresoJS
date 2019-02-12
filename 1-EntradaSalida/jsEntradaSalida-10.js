@@ -8,7 +8,7 @@ function mostrarAumento()
  var Descuento;
 importar=importe.value;
 importar=parseInt(importar);
-Descuento= importar-25/100;
+Descuento= importar-(importar/4);
 resultado.value=Descuento;
 	
 }
