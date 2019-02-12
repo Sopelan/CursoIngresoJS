@@ -19,5 +19,5 @@ function CentigradosFahrenheit ()
 	grados=Temperatura.value;
     grados=parseFloat(grados);
 	fahrenheit=(grados-32)/1.8;
-	alert(grados+ " centigrados son " + fahrenheit + " fahrenheit")
+	alert(grados+ " centigrados son " + fahrenheit + " fahrenheit");
 }
