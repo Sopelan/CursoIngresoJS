@@ -1,14 +1,18 @@
 
 function mostrar()
-{
- var ancho;
-  var largo;
-  var rectangulo;
-  ancho=prompt("de cuanto es tu ancho", "");
-  ancho=parseInt(ancho);
-  largo=prompt("de cuanto es tu alto", "");
-  largo=parseInt(largo);
-  rectangulo=(ancho*2+largo*2);
-  alert("el perimetro es de " + rectangulo);
+{var nom1;
+ var nom2;
+ var edad1;
+ var edad2;
+ 
+ nom1=prompt("su nombre?" ,  " ");
+ nom2=prompt("su nombre?", " ");
+ edad1=prompt("su edad?" , " ");
+ edad1=parseFloat(edad1);
+ edad2=prompt("su edad?", " ");
+ edad2=parseFloat(edad2);
+ var suma;
+ suma=(edad1 + edad2);
+ alert("ustedes son " + nom1 + " y " + nom2 + " sus edades son " + edad1 + " y " + edad2 + " ,y la suma de sus edades es " + suma);
 
 }
