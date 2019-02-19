@@ -18,51 +18,39 @@ function CalcularPrecio ()
  lamparas=parseFloat(lamparas);
  precio=lamparas*35;
  marca=Marca.value;
- if (lamparas>=6) 
-  {result=precio*1/2;
-  precioDescuento.value=result;
+ switch(lamparas)
+ { case 5: if (marca=="ArgentinaLuz")
+   {result=precio*3/5;
+   } else
+   {result=precio*7/10;
+   }
+   break;
+   case 4:if (marca=="ArgentinaLuz" ||marca=="FelipeLamparas"  )
+   {result=precio*3/4;
+   } else
+   {result=precio*4/5;
+   }
+   break;
+   case 3: if (marca=="ArgentinaLuz")
+   {result=precio*85/100;
+   } else if  (marca=="FelipeLamparas")
+   {result=precio*9/10;
+   }
+   else{result=precio*19/20;}
+  break;
+   
+
  }
- else if (lamparas==5 && marca=="ArgentinaLuz" )
-  {
-   result=precio*3/5;   
-   precioDescuento.value=result;
+ 
+ if(lamparas>=6) 
+  {result=precio*1/2;
   }
-   else if (lamparas==5 && marca!="ArgentinaLuz" )
-  {
-   result=precio*7/10;
-    precioDescuento.value=result;
-  }
-   else if (lamparas==4 && (marca=="ArgentinaLuz" ||marca=="FelipeLamparas"  ))
-  {
-   result=precio*3/4;
-   precioDescuento.value=result;
-  }
-  else if (lamparas==4 && marca!="ArgentinaLuz" && marca!="FelipeLamparas"  )
-  {
-   result=precio*4/5;
-   precioDescuento.value=result;
-  }
-  else if (lamparas==3 && marca=="ArgentinaLuz" )
-  {
-   result=precio*85/100;
-   precioDescuento.value=result;
-  }
-  else if (lamparas==3 && marca=="FelipeLamparas"  )
-  {
-   result=precio*9/10;
-   precioDescuento.value=result;
-  }
-  else if (lamparas==3 && (marca!="ArgentinaLuz" ||marca!="FelipeLamparas"  ))
-  {
-   result=precio*19/20;
-   precioDescuento.value=result;
-  }
-  else{
-  result=precio;
-  precioDescuento.value=result;
+ if (lamparas<=2)
+  { result=precio; 
   }
   if (result>=120)
   {alert("Usted pago "+ result*11/10 +" de IIBB")
   }
+  precioDescuento.value=result;
 }
 
