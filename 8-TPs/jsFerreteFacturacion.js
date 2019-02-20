@@ -5,59 +5,50 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	var precio1;
-    var precio2;
-    var precio3;
-    var en1
-    var en2
-    var en3
-     precio1=precioUno.value;
-     precio2=precioDos.value;
-     precio3=precioTres.value;
-     en3=parseInt(precio3);
-     en1=parseInt(precio1);
-     en2=parseInt(precio2);
-var sumar
-sumar=en1 + en2 + en3;
-alert(sumar);
+	var num1;
+	var num2;
+	var num3;
+	num1=PrecioUno.value;
+	num1=parseFloat(num1);
+	num2=PrecioDos.value;
+	num2=parseFloat(num2);
+	num3=PrecioTres.value;
+	num3=parseFloat(num3);
+	var sumar;
+    sumar=num1+num2+num3;
+    alert("la suma es "+sumar);
 }
 function Promedio () 
 {
-		var precio1;
-    var precio2;
-    var precio3;
-    var en1
-    var en2
-    var en3
-     precio1=precioUno.value;
-     precio2=precioDos.value;
-     precio3=precioTres.value;
-     en3=parseInt(precio3);
-     en1=parseInt(precio1);
-     en2=parseInt(precio2);
-var promedio
-promedio=(en1 + en2 + en3)/3;
-alert(promedio);
+	var num1;
+	var num2;
+	var num3;
+	num1=PrecioUno.value;
+	num1=parseFloat(num1);
+	num2=PrecioDos.value;
+	num2=parseFloat(num2);
+	num3=PrecioTres.value;
+	num3=parseFloat(num3);
+	var sumar;
+    sumar=(num1+num2+num3)/3;
+    alert("el promedio es "+sumar);
 
 }
 function PrecioFinal () 
 {
-	var precio1;
-    var precio2;
-    var precio3;
-    var en1;
-    var en2;
-    var en3;
-     precio1=precioUno.value;
-     precio2=precioDos.value;
-     precio3=precioTres.value;
-     en3=parseInt(precio3);
-     en1=parseInt(precio1);
-     en2=parseInt(precio2);
-var sumar;
-var preciofinal;
-sumar=en1 + en2 + en3;
-preciofinal=(sumar*0.21)+sumar;
-alert(preciofinal);
+	var num1;
+	var num2;
+	var num3;
+	num1=PrecioUno.value;
+	num1=parseFloat(num1);
+	num2=PrecioDos.value;
+	num2=parseFloat(num2);
+	num3=PrecioTres.value;
+	num3=parseFloat(num3);
+	var sumar;
+    sumar=(num1+num2+num3);
+    var preciofinal;
+    preciofinal=(sumar)+(sumar*21/100);
+    alert("el precio final es "+preciofinal);
 
 }
