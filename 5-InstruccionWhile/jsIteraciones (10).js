@@ -11,6 +11,7 @@ var promedionegativos=0;
 var diferencia;
 var promediop;
 var promedion;
+
 	//declarar contadores y variables 
 	
 var respuesta=true
@@ -39,6 +40,11 @@ while(respuesta==true)
 		{
 		cantidadceros=cantidadceros+1;
 		}
+	  if (num % 2 == 0)
+
+		{
+		cantidadnumerospares=cantidadnumerospares+1;
+		}
 	respuesta=confirm("queres ingresar otro numero?");
 	}
 promedion=sumanegativos/promedionegativos;
@@ -50,6 +56,7 @@ document.write("<p>La Suma de los negativos es de " + sumanegativos+ "</p>");
 document.write("<p>La cantidad de positivos es de " + promediopositivos+ " </p>");
 document.write("<p>La cantidad de negativos es de " + promedionegativos+ " </p>");
 document.write("<p>La cantidad de ceros es de " + cantidadceros+ " </p>");
+document.write("<p>La cantidad de numeros pares es de " + cantidadnumerospares+ " </p>");
 document.write("<p>El promedio de positivos es de " + promediop+ " </p>");
 document.write("<p>El promedio de negativos es de " + promedion +"</p>");
 document.write("<p>La diferencia entre positivos y negativos es de " + diferencia+ " </p>");
