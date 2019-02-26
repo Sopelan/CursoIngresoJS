@@ -3,22 +3,12 @@ function mostrar()
 
 var contador=0;
 var acumulador=0;
-var num1=prompt("insertar el numero 1."," ");
-var num2=prompt("insertar el numero 2."," ");
-var num3=prompt("insertar el numero 3."," ");
-var num4=prompt("insertar el numero 4."," ");
-var num5=prompt("insertar el numero 5."," ");
-num1=parseFloat(num1);
-num2=parseFloat(num2);
-num3=parseFloat(num3);
-num4=parseFloat(num4);
-num5=parseFloat(num5);
-acumulador=num1+num3+num2+num4+num5;
-while(acumulador<1000000 && acumulador!=0)
+while(contador<5)
 	{
-	acumulador=acumulador+acumulador;
-	acumulador=parseFloat(acumulador);
-	alert(acumulador);
+ 	contador=contador+1;
+ 	num1=prompt("insertar numero "  contador);
+	num1=parseFloat(num1);
+ 	acumulador=num1+acumulador;
 	}
 suma.value=acumulador;
 promedio.value=acumulador/5;
