@@ -51,15 +51,15 @@ promedion=sumanegativos/promedionegativos;
 promediop=sumapositivos/promediopositivos;
 diferencia=sumapositivos+sumanegativos
 document.open();
-document.write("<p>La Suma de los positivos es de " + sumapositivos+"</p>");
-document.write("<p>La Suma de los negativos es de " + sumanegativos+ "</p>");
-document.write("<p>La cantidad de positivos es de " + promediopositivos+ " </p>");
-document.write("<p>La cantidad de negativos es de " + promedionegativos+ " </p>");
-document.write("<p>La cantidad de ceros es de " + cantidadceros+ " </p>");
-document.write("<p>La cantidad de numeros pares es de " + cantidadnumerospares+ " </p>");
-document.write("<p>El promedio de positivos es de " + promediop+ " </p>");
-document.write("<p>El promedio de negativos es de " + promedion +"</p>");
-document.write("<p>La diferencia entre positivos y negativos es de " + diferencia+ " </p>");
+document.write("<br>La Suma de los positivos es de " + sumapositivos+"</br>");
+document.write("<br>La Suma de los negativos es de " + sumanegativos+ "</br>");
+document.write("<br>La cantidad de positivos es de " + promediopositivos+ " </br>");
+document.write("<br>La cantidad de negativos es de " + promedionegativos+ " </br>");
+document.write("<br>La cantidad de ceros es de " + cantidadceros+ " </br>");
+document.write("<br>La cantidad de numeros pares es de " + cantidadnumerospares+ " </br>");
+document.write("<br>El promedio de positivos es de " + promediop+ " </br>");
+document.write("<br>El promedio de negativos es de " + promedion +"</br>");
+document.write("<br>La diferencia entre positivos y negativos es de " + diferencia+ " </br>");
 document.close();
 
 
