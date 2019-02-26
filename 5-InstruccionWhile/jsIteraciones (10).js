@@ -31,15 +31,19 @@ while(respuesta==true)
 		sumapositivos=sumapositivos+num;
 		promediopositivos=promediopositivos+1;
 		}
-	else if (num<0) 
-		{
-		sumanegativos=sumanegativos+num;
-		promedionegativos=promedionegativos+1;
-		}
-	else
-		{
-		cantidadceros=cantidadceros+1;
-		}
+	else 
+	{
+		if (num<0) 
+			{
+			sumanegativos=sumanegativos+num;
+			promedionegativos=promedionegativos+1;
+			}
+		else
+			{
+			cantidadceros=cantidadceros+1;
+			}
+	}
+	 
 	  if (num % 2 == 0)
 
 		{
