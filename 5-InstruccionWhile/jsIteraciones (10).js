@@ -13,13 +13,18 @@ var promediop;
 var promedion;
 	//declarar contadores y variables 
 	
-var respuesta="si";
+var respuesta=true
 
-while(respuesta=="si")
+while(respuesta==true)
 	{
 	contador=contador+1;
 	num=prompt("ingresar numero " + contador);
 	num=parseFloat(num);
+	while(isNaN(num))
+		{
+		num=prompt("ingresar numero " + contador);
+		num=parseFloat(num);	
+		}
 	if (num>0)
 		{
 		sumapositivos=sumapositivos+num;
@@ -34,19 +39,21 @@ while(respuesta=="si")
 		{
 		cantidadceros=cantidadceros+1;
 		}
-	respuesta=prompt("queres ingresar otro numero?");
+	respuesta=confirm("queres ingresar otro numero?");
 	}
 promedion=sumanegativos/promedionegativos;
 promediop=sumapositivos/promediopositivos;
 diferencia=sumapositivos+sumanegativos
-alert("La Suma de los positivos es de " + sumapositivos);
-alert("La Suma de los negativos es de " + sumanegativos);
-alert("La cantidad de positivos es de " + promediopositivos);
-alert("La cantidad de negativos es de " + promedionegativos);
-alert("La cantidad de ceros es de " + cantidadceros);
-alert("El promedio de positivos es de " + promediop);
-alert("El promedio de negativos es de " + promedion);
-alert("La diferencia entre positivos y negativos es de " + diferencia);
+document.open();
+document.write("<p>La Suma de los positivos es de " + sumapositivos+"</p>");
+document.write("<p>La Suma de los negativos es de " + sumanegativos+ "</p>");
+document.write("<p>La cantidad de positivos es de " + promediopositivos+ " </p>");
+document.write("<p>La cantidad de negativos es de " + promedionegativos+ " </p>");
+document.write("<p>La cantidad de ceros es de " + cantidadceros+ " </p>");
+document.write("<p>El promedio de positivos es de " + promediop+ " </p>");
+document.write("<p>El promedio de negativos es de " + promedion +"</p>");
+document.write("<p>La diferencia entre positivos y negativos es de " + diferencia+ " </p>");
+document.close();
 
 
 }

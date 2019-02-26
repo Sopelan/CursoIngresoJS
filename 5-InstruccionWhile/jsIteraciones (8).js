@@ -4,12 +4,18 @@ function mostrar()
 	var positivo=0;
 	var negativo=1;
 	var numero
-	var respuesta='si';
-
-while(respuesta=="si")
+	var respuesta=true;
+    var contador=0;
+while(respuesta==true)
 	{
-    numero=prompt("insertar numero");
+    contador=contador+1;
+    numero=prompt("insertar numero "+ contador);
     numero=parseFloat(numero);
+    while(isNaN(numero))
+        {
+        numero=prompt("insertar numero "+contador);
+        numero=parseFloat(numero);
+        }
     if (numero>=0) 
     	{
     	positivo=positivo+numero;
@@ -19,7 +25,7 @@ while(respuesta=="si")
     	negativo=negativo*numero;
     	}
 
-    respuesta=prompt("queres pedir otro numero?");
+    respuesta=confirm("queres pedir otro numero?");
 	}
 document.getElementById('suma').value=positivo;
 document.getElementById('producto').value=negativo;
