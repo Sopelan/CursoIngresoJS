@@ -4,32 +4,31 @@ var sexo;
 var numero;
 var contador=0;
 var suma=0;
-var minimo=11;
+var minimo;
 var sexo2;
 var cantidadvaronesaprobados=0;
 while(contador<5)
 	{
 	contador=contador+1;
-	sexo=prompt("sos de sexo f o m");	
-	while(sexo!="f" && sexo!="m")
+	sexo=prompt("sos de sexo f o m?");	
+	while(isNaN(sexo)==false || (sexo!="f" && sexo!="m"))
 		{
-		sexo=prompt("sos de sexo f o m");
+		sexo=prompt("error , sos de sexo f o m?");
 		}
 	numero=prompt("eligir un numero entre 0 y 10");
 	numero=parseInt(numero);	
-	while(numero<0 || numero>10)
+	while(isNaN(numero)==true || numero<0 || numero>10)
 		{
-		numero=prompt("eligir un numero entre 0 y 10");
+		numero=prompt("error, eligir un numero entre 0 y 10");
 		numero=parseInt(numero);
-		while(isNaN(numero))
-			{ 
-			numero=prompt("eligir un numero entre 0 y 10");
-			numero=parseInt(numero);
-			}
 		}
-	if (minimo>numero) 
+	if (sexo=="m" && numero>=6)
 		{
-		minimo=numero;
+		cantidadvaronesaprobados=cantidadvaronesaprobados+1;
+		}	
+	if (contador==1)
+		{
+		minimo=numero
 		if(sexo=="f")
 			{
 			sexo="femenino";
@@ -37,16 +36,26 @@ while(contador<5)
 		else
 			{
 			sexo="masculino";
-			}
-		sexo2=sexo;
+			}	
+		sexo2=sexo
 		}
-	if (sexo=="m")
+	else
 		{
-		if (numero>=6) 
+		if (minimo>numero) 
 			{
-			cantidadvaronesaprobados=cantidadvaronesaprobados+1;
+			minimo=numero;
+			if(sexo=="f")
+				{
+				sexo="femenino";
+				}
+			else
+				{
+				sexo="masculino";
+				}
+			sexo2=sexo;
 			}
-		}		
+		}
+		
 	suma=numero+suma
 	}	
 alert("El promedio de las notas totales es " + suma/contador)
